@@ -25,10 +25,17 @@ public class Program2 {
 		
 		System.out.println("====== TEST 3: department insert ========");
 		
-		Department dep = new Department(null, "TI");
-		departmentDao.insert(dep);
+		Department dep = new Department(7, "Tecnologia");
+		//departmentDao.insert(dep);
 		System.out.println("Inserted! New id = "+ dep.getId());
-
+		
+		Department department=departmentDao.findById(7);
+		
+		System.out.println("====== TEST 4: department update ========");
+		
+		department.setName("Tecnologia");
+		departmentDao.update(department);
+		System.out.println("Update completed");
 
 	}
 
