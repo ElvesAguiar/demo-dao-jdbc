@@ -34,8 +34,14 @@ public class Program2 {
 		System.out.println("====== TEST 4: department update ========");
 		
 		department.setName("Tecnologia");
-		departmentDao.update(department);
+		//departmentDao.update(department);
 		System.out.println("Update completed");
+		
+		System.out.println("====== TEST 5: department delete ========");
+		departmentDao.deleteById(7);
+
+		System.out.println("Delete completed");
+
 
 	}
 
