@@ -22,6 +22,12 @@ public class Program2 {
 		for (Department dep:departmentDao.findAll()) {
 			System.out.println(dep);
 		};
+		
+		System.out.println("====== TEST 3: department insert ========");
+		
+		Department dep = new Department(null, "TI");
+		departmentDao.insert(dep);
+		System.out.println("Inserted! New id = "+ dep.getId());
 
 
 	}
